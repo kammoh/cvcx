@@ -1358,6 +1358,7 @@ static int32 xpr_has_illegal_sys_fcall(struct expr_t *ndp)
  switch (syfp->syfnum) {
   case STN_ITOR: case STN_BITSTOREAL: case STN_RTOI: case STN_REALTOBITS:
   case STN_CEIL: case STN_FLOOR:
+  case STN_CLOG2:
   case STN_SIGNED: case STN_UNSIGNED:
   case STN_COS: case STN_SIN: case STN_TAN: case STN_ACOS: case STN_ASIN:
   case STN_ATAN: case STN_COSH: case STN_SINH: case STN_TANH:
