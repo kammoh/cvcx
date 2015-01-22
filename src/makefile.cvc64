@@ -133,8 +133,8 @@ cvc64:	$(MAINOBJ) $(OBJS) hexasm cvclib_str.o exe_main_str.o
 # create the object files and then create the .s files
 hexasm:	hexasm.o exe_main.o 
 	$(LD) --relocatable -o cvclib.o $(RT_OBJS) 
-	hexasm cvclib.o __cvclib 8 > cvclib_str.s
-	hexasm exe_main.o __exe_main 8 > exe_main_str.s
+	./hexasm cvclib.o __cvclib 8 > cvclib_str.s
+	./hexasm exe_main.o __exe_main 8 > exe_main_str.s
 
 hexasm.o:
 	$(CC) hexasm.c -o hexasm
